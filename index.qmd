@@ -42,7 +42,7 @@ title-slide-attributes:
 :::
 :::
 
-## <span style="color: #ffffff;"> ¿Quién soy yo? {.light background-color="#ffffff"}
+## <span style="color: #ffffff;"> ¿Quién fui/soy yo? {.light background-color="#ffffff"}
 
 <br>
 
@@ -53,15 +53,15 @@ title-slide-attributes:
 -  Becario en el IECA.
 -  Otras cosas raras
 -  Estadístico con Sociólogos
--  Data Scientist como dicen los modernos  
 ::: 
 ::: 
 
 ::: {.column width="50%"}
 ::: incremental
--   Asunciones incorrectas sobre los datos puede ser costoso
--   Los datos del mundo real en las empresas reales están mal... si, en todas
--   Es muy probable que no haya ningún control, por mucho que te digan que todo está bien
+-  Data Scientist como dicen los modernos  
+-  Vicepresidente de la asociación [R-Hispano](https://www.r-es.org)
+-  Bloguero [Muestrear no es pecado](https://muestrear-no-es-pecado.es/)
+-  Pocaster [CuaRtil](https://open.spotify.com/show/3Ku9xHJdqu4g3VM5maolr7?si=6f37997d31794646)
 :::
 ::: 
 :::
