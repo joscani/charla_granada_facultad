@@ -1,0 +1,84 @@
+---
+title: "“Big Data y ciencia de datos: la revolución silenciosa de la estadística"
+subtitle: "Un punto de vista personal"
+author: "Cañadas Reche, José Luis"
+institute: "Universidad de Granada"
+date: "2025-04-25"
+date-format: iso
+format:
+  revealjs: 
+    slide-number: true
+    theme: theme.scss
+    css: theme.css
+    linkcolor: "#1a1a1a"
+    highlight-style: github
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+    code-block-bg: true
+    transition: fade
+    width: 1600
+editor: source
+title-slide-attributes: 
+  data-background-image: "images/esferas.jpeg"
+  data-background-size: "45%"
+  data-background-position: "right"
+---
+
+## [Sobre mi]{style="color: #000000;"} {.dark background-color="#333333"}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+![](images/profile2.jpg){#headshot height="500px"}
+:::
+
+::: {.column width="50%"}
+-   Soy José Luis Cañadas Reche 👋
+-   Data Scientist/ Estadístico 💻
+-   ️MasOrange 🍊
+-   Idealista (en unos días) 🏡
+:::
+:::
+
+## <span style="color: #ffffff;"> ¿Quién soy yo? {.light background-color="#ffffff"}
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+::: incremental
+-  Alumno de esta facultad. No especialmente brillante los primeros años
+-  Becario en el IECA.
+-  Otras cosas raras
+-  Estadístico con Sociólogos
+-  Data Scientist como dicen los modernos  
+::: 
+::: 
+
+::: {.column width="50%"}
+::: incremental
+-   Asunciones incorrectas sobre los datos puede ser costoso
+-   Los datos del mundo real en las empresas reales están mal... si, en todas
+-   Es muy probable que no haya ningún control, por mucho que te digan que todo está bien
+:::
+::: 
+:::
+
+## <span style="color: #ffffff;"> ¿Cómo acabé en esto del "Bigdata"?  {.light background-color="#ffffff"}
+
+
+<br>
+
+::: fragment
+Hablando de datos podría ser cosas como:
+:::
+
+::: incremental
+-   Testear los datos de entrada
+-   Testear los datos de salida
+-   Testear los flujos de creación de datos
+-   Reglas de datos, etc.
+:::
+
