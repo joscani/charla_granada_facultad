@@ -2,7 +2,7 @@
 title: "“Big Data y ciencia de datos: la revolución silenciosa de la estadística"
 subtitle: "Un punto de vista personal"
 author: "Cañadas Reche, José Luis"
-institute: "Universidad de Granada"
+institute: "MasOrange?"
 date: "2025-04-25"
 date-format: iso
 format:
