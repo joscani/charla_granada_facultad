@@ -84,13 +84,13 @@ Lorem ipsum...
 ## <span style="color: #ffffff;"> ¿Qué es esto "Bigdata"? ¿Y la ciencia de datos?  {.light background-color="#ffffff"}
 
 <br>
+
 ::: columns
 ::: {.column width="50%"}
 ::: incremental
 -  Nadie tiene muy claro qué es BigData. ¿Lo de las 5 V's? 
 -  En realidad no importa mucho cómo se defina. 
 -  Es un "hype", igual que ahora el nuevo "hype" es la IA.
-
 ::: 
 ::: 
 
@@ -98,7 +98,6 @@ Lorem ipsum...
 ::: incremental
 - Data Science exists because Statists (as a field) missed the boat on computers.
 - Lo de "ciencia" en ciencia de datos es "cuestionable"
-
 :::
 ::: 
 :::
