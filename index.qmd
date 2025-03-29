@@ -72,13 +72,17 @@ title-slide-attributes:
 <br>
 
 ::: fragment
-Hablando de datos podría ser cosas como:
+
+Lorem ipsum... 
 :::
 
 ::: incremental
--   Testear los datos de entrada
--   Testear los datos de salida
--   Testear los flujos de creación de datos
--   Reglas de datos, etc.
+- 
 :::
 
+
+## <span style="color: #ffffff;"> ¿Qué es esto "Bigdata"?  {.light background-color="#ffffff"}
+## <span style="color: #ffffff;"> ¿Y qué tiene que ver con la Estadística? {.light background-color="#ffffff"}
+## <span style="color: #ffffff;"> ¿Qué ventajas tenemos los estadísticos?  {.light background-color="#ffffff"}?
+## <span style="color: #ffffff;"> ¿Qué carencias tenemos?  {.light background-color="#ffffff"}
+## <span style="color: #ffffff;"> ¿Qué tiene que cambiar en la formación reglada? {.light background-color="#ffffff"}
