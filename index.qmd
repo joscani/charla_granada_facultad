@@ -112,10 +112,9 @@ Lorem ipsum...
 - Descripción, predicción, atribución 
 - Inferencia Causal
 - pero solo hace falta estadística o solo computación ? 
-
 ::: 
 
-## <span style="color: #ffffff;"> ¿Qué pintamos los estadísticos?  {.light background-color="#ffffff"}?
+## <span style="color: #ffffff;"> ¿Qué pintamos los estadísticos?  {.light background-color="#ffffff"}
 
 ¿Qué debería hacer un estadístico para ser un buen científico de datos?
 
