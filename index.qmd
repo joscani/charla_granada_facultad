@@ -189,17 +189,31 @@ Ojo!. No sé cómo está ahora
 
 ## <span style="color: #ffffff;"> Fuga de clientes {.light background-color="#ffffff"}
 
+<br>
 
+::: columns
+::: {.column width="40%"}
 ::: incremental
-
 - Predecir solicitudes de portabilidad. 
 - Elegir diariamente clientes con mayor probabilidad de fuga
 - Mandar a campaña diaria. Elección grupo de control
-- Medición 
-- ![](images/ganancia_60_dias.png)
+
 - Análisis de accionabilidad. Inferencia causal
+:::
+:::
+
+::: notes
+- >2 Millones de líneas, se usan varios días de datos de entrenamiento. 20 o 40 millones de filas, 200 variables
+:::
+:::{.column width="60%"}
+::: incremental
+-  ![](images/ganancia_60_dias.png){width=100%}
 
 :::
+:::
+:::
+
+
 
 
 ## <span style="color: #ffffff;"> Marketing Mix Modelling {.light background-color="#ffffff"}
