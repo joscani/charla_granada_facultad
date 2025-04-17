@@ -7,6 +7,7 @@ date: "2025-04-25"
 date-format: iso
 format:
   revealjs: 
+    embed-resources: true
     slide-number: true
     theme: theme.scss
     css: theme.css
@@ -38,7 +39,7 @@ title-slide-attributes:
 -   Soy José Luis Cañadas Reche 👋
 -   Data Scientist/ Estadístico 💻
 -   ️MasOrange 🍊
--   quien sabe (en unas semanas) 🏡
+-   En unas semanas 🏡
 :::
 :::
 
@@ -52,7 +53,7 @@ title-slide-attributes:
 -  Alumno de esta facultad. No especialmente brillante los primeros años
 -  Becario en el IECA.
 -  Otras cosas raras
--  Estadístico con Sociólogos
+-  Estadístico en Instituto de Estudios Sociales de Andalucía (IESA)
 ::: 
 ::: 
 
@@ -96,7 +97,7 @@ Avatares del destino
 :::
 :::
 
-## <span style="color: #ffffff;"> ¿Qué es esto "Bigdata"? ¿Y la ciencia de datos?  {.light background-color="#ffffff"}
+## <span style="color: #ffffff;"> ¿Qué es esto del "Bigdata"? ¿Y la ciencia de datos?  {.light background-color="#ffffff"}
 
 <br>
 
@@ -126,7 +127,7 @@ Avatares del destino
 - The two cultures. Aunque prefiero [las tres culturas](https://www.datanalytics.com/2018/07/11/las-tres-culturas/)
 - [Prediction, estimation, attribution](https://med.stanford.edu/content/dam/sm/dbds/documents/biostats-workshop/paper-1-.pdf) . [Mi punto de vista](https://muestrear-no-es-pecado.es/2020/06/07/predicci%C3%B3n-estimaci%C3%B3n-atribuci%C3%B3n/)
 - Inferencia Causal
-- pero ¿sólo hace falta estadística o sólo computación ? 
+- Pero ¿sólo hace falta estadística o sólo computación ? 
 ::: 
 
 ## <span style="color: #ffffff;"> ¿Qué pintamos los estadísticos?  {.light background-color="#ffffff"}
@@ -135,9 +136,9 @@ Avatares del destino
 
 ::: incremental
 
--  Aprender a programar, R, Python, sql, julia, Rust, C++ ? 
--  Entender el campo de aplicación, negocio, ciencia, . 
--  Saber contar historias con datos y transmitir conceptos complejos de forma simple
+-  Aprender a programar, ¿R, Python, sql, julia, Rust, C++ ? 
+-  Entender el campo de aplicación, negocio, ciencia. 
+-  Saber contar historias con datos y transmitir conceptos complejos de forma simple.
 -  Mucha gente se empeña solo en programar y aprender bien un lenguaje. Es útil, pero lo que
 os diferencia a vosotros es el pensamiento estadístico. 
 -  La estadística es la ciencia de la incertidumbre. 1/3 != 100/300
@@ -148,7 +149,7 @@ os diferencia a vosotros es el pensamiento estadístico.
 
 ::: fragment
 
-Ojo!. No sé cómo está ahora
+¡Ojo!. No sé cómo está ahora
 
 :::
 
@@ -158,7 +159,7 @@ Ojo!. No sé cómo está ahora
 -  Énfasis en la aplicación, sin dejar de lado la rigurosidad.
 -  Colaboración con las empresas.
 -  Saber vendernos
--  
+-  ¿?
 :::
 
 
@@ -179,10 +180,10 @@ Ojo!. No sé cómo está ahora
 
 ::: incremental
 
--  Modelos de clasificación. Propensión de compra, fuga de clientes
+-  Modelos de clasificación. Propensión de compra, fuga de clientes.
 -  Marketing Mix Modelling.
--  Análisis de redes. SNA llamadas
--  Perfilado de clientes. Navegación 
+-  Análisis de redes. SNA llamadas.
+-  Perfilado de clientes. 
 
 :::
 
@@ -232,9 +233,32 @@ Ojo!. No sé cómo está ahora
 ## <span style="color: #ffffff;"> SNA {.light background-color="#ffffff"}
 
 ::: incremental
+<br>
 
+-   50 millones msisdn en cdrs 
+
+-   Histórico 4 meses
+
+-   Matriz de adyacencia 40 Millones x 40 Millones
+
+-   Graphframe de spark
 
 :::
+
+## <span style="color: #ffffff;"> SNA. Definición de vínculo {.light background-color="#ffffff"}
+
+::: incremental
+<br>
+
+-   Criterio seleccionar sólo vínculos fuertes
+
+-   $$link_{i,j} = \dfrac{\sum{calls_{i,j}}}{\sum calls_i + \sum calls_j - \sum{calls_{i,j}}} $$
+
+-   Para cada teléfono se obtiene sus contactos importantes a alcance 2. 
+
+:::
+
+
 
 
 
@@ -246,6 +270,81 @@ Ojo!. No sé cómo está ahora
 
 ::: incremental
 
+-  Navegación web. Anonimizamos tlfs
+-  Consideramos las 10 mil urls más visitadas
+-  Muestreamos tlfs fijos (20%  nos basta)
+-  SVD de la matriz resultante. 400 mil filas  x 10 mil columnas. Matriz muy dispersa
+
+
 
 :::
+
+
+
+## <span style="color: #ffffff;"> Urls similares  {.light background-color="#ffffff"}
+
+```
+> dist_matrix[grep("*.pullandbear.com",rownames(dist_matrix), fixed = TRUE), ] |>  enframe() |> arrange(value)
+# A tibble: 9,564 × 2
+   name               value
+   <chr>              <dbl>
+ 1 *.pullandbear.com    0  
+ 2 *.stradivarius.com  68.1
+ 3 *.pullandbear.net   69.6
+ 4 *.nagich.com        77.9
+ 5 *.backmarket.com    85.6
+ 6 *.bershka.com       86.2
+ 7 *.backmarket.es     89.9
+ 8 *.salesmanago.es    94.6
+ 9 *.turnto.com       101. 
+10 *.quickcep.com     104. 
+
+```
+
+## <span style="color: #ffffff;"> Urls similares  {.light background-color="#ffffff"}
+
+
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+
+umap_out <-  readRDS("./umap_out.rds")
+
+
+umap_plot <- function(umap_out,
+                      patrones = NULL,
+                      max_points = NULL) {
+
+  
+  to_plot <- umap_out |>
+    as.data.frame() |>
+    rownames_to_column(var = "rowname")
+  
+  if (!is.null(patrones)) {
+    # Si hay varios patrones, construir regex combinado
+    regex <- paste(patrones, collapse = "|")
+    to_plot <- to_plot |>
+      mutate(selected = if_else(str_detect(rowname, regex), "seleccionado", "no_select"))
+  } else {
+    to_plot <- to_plot |> mutate(selected = "sin_selección")
+  }
+  
+  
+  # 5. Pintar
+  p <- to_plot |> 
+    ggplot(aes(x = UMAP1, y = UMAP2, color = selected, text = rowname)) +
+    geom_point(alpha = 0.7, size = rel(4)) +
+    viridis::scale_color_viridis(discrete = TRUE, option = "D", alpha = 0.9) +
+    theme_minimal(base_size = 13)
+  
+  plotly::ggplotly(p, tooltip = "text")
+}
+
+
+umap_plot(umap_out, patrones = c(".pullandbear"))
+
+
+```
 
