@@ -20,10 +20,16 @@ format:
     transition: fade
     width: 1600
 editor: source
+resources:
+  - data 
+filters:
+  - shinylive
 title-slide-attributes: 
   data-background-image: "images/esferas.jpeg"
   data-background-size: "45%"
   data-background-position: "right"
+execute:
+  echo: true
 ---
 
 ## [Sobre mi]{style="color: #000000;"} {.dark background-color="#333333"}
@@ -175,7 +181,7 @@ os diferencia a vosotros es el pensamiento estadístico.
 
 
 
-## <span style="color: #ffffff;"> Ejemplos en telco. I {.light background-color="#ffffff"}
+## <span style="color: #ffffff;"> Ejemplos en telco.{.light background-color="#ffffff"}
 
 
 ::: incremental
@@ -306,14 +312,12 @@ os diferencia a vosotros es el pensamiento estadístico.
 
 ## <span style="color: #ffffff;"> Urls similares  {.light background-color="#ffffff"}
 
-
-
 ```{r}
 #| echo: false
 
 library(tidyverse)
 
-umap_out <-  readRDS("./umap_out.rds")
+umap_out <-  readRDS("./data/umap_out.rds")
 
 
 umap_plot <- function(umap_out,
@@ -350,4 +354,39 @@ umap_plot(umap_out, patrones = c(".pullandbear"))
 
 
 ```
+
+
+## <span style="color: #ffffff;"> Mensaje para estudiantes y egresados  {.light background-color="#ffffff"}
+
+
+::: incremental
+
+-  Confía en tu formación estadística
+-  No te obsesiones con aprender a programar. ¡Pero aprende!
+-  Hay mucho desconocimiento estadístico, incluso en empresas top
+-  No dejes de estudiar y aprender, terminar la carrera es sólo el principio
+-  Crea un portfolio personal de proyectos, por ejemplo en github
+-  Participa en comunidades de datos, como R-Hispano, Pydata.
+
+:::
+
+##  {.transdark background-color="#333333" background-image="images/question-mark-1872665_1280.webp" background-size="99%"}
+
+<h1>
+
+<center>[Esto es todo. ¿Preguntas?]{style="color: #000000;"}</center>
+
+</h1>
+
+##  {.transdark background-color="#333333"} 
+
+:::columns
+::: {.column width="50%"}
+![](images/blog_qr.svg){width=100%}
+:::
+::: {.column width="50%"}
+![](images/podcast.svg){width=100%}
+:::
+:::
+
 
